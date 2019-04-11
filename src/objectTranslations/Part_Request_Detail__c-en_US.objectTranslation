@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Part Request Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Part Request Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Header --></label>
+        <name>Header__c</name>
+        <relationshipLabel><!-- Part Request Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inventory Loc --></label>
+        <name>Inventory_Loc__c</name>
+        <relationshipLabel><!-- Part Request Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Please Specify</masterLabel>
+            <translation><!-- Please Specify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repair Only</masterLabel>
+            <translation><!-- Repair Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repair-Stock</masterLabel>
+            <translation><!-- Repair-Stock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WH-to-Site</masterLabel>
+            <translation><!-- WH-to-Site --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Required By --></label>
+        <name>Required_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site Part --></label>
+        <name>Site_Part__c</name>
+        <relationshipLabel><!-- Part Request Details --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Part Request Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select an Inventory Location --></errorMessage>
+        <name>Inventory_Location_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a valid value. --></errorMessage>
+        <name>Request_type_check</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Part_Request_Detail --></label>
+        <name>Part_Request_Detail</name>
+    </webLinks>
+</CustomObjectTranslation>

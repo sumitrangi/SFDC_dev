@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Site Part</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Site Parts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Date --></label>
+        <name>Install_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Installation Site --></label>
+        <name>Installation_Site__c</name>
+        <relationshipLabel><!-- Site Parts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inventory Loc --></label>
+        <name>Inventory_Loc__c</name>
+        <relationshipLabel><!-- Site Parts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Part Used --></label>
+        <name>Part_Used__c</name>
+        <relationshipLabel><!-- Site Parts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not in use</masterLabel>
+            <translation><!-- Not in use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Obsolete</masterLabel>
+            <translation><!-- Obsolete --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Warranty Date --></label>
+        <name>Warranty_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Site Part Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select Inventory Location or Installation Site. --></errorMessage>
+        <name>Inventory_and_Site_check</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Travel Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Travel Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accommodation --></label>
+        <name>Accommodation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Airfare --></label>
+        <name>Airfare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days of Travel --></label>
+        <name>Days_of_Travel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Miscellaneous --></label>
+        <name>Miscellaneous__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purpose of Travel --></label>
+        <name>Purpose_of_Travel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Travel End Date --></label>
+        <name>Travel_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Travel Start Date --></label>
+        <name>Travel_Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Travel Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Expenditure Estimates --></label>
+            <section>Expenditure Estimates</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
