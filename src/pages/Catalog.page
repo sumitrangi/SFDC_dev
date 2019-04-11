@@ -1,0 +1,32 @@
+<apex:page controller="StoreFrontController" tabStyle="Merchandise__c">
+<apex:form >
+  <h1>Product Catalog</h1>
+  <apex:pageBlock title="Our Products">
+      <apex:pageblockSection columns="1">
+          <apex:pageblockTable value="{!products}" var="pitem">
+              <apex:column headerValue="Products">
+                  <apex:outputText value="{!pitem.Name}"/>
+              </apex:column>
+              <apex:column headerValue="Description">
+                  <apex:outputText value="{!pitem.Description}"/>
+              </apex:column>
+              <apex:column headerValue="Price">
+                  <apex:outputText value="{0,number,currency}">
+                      <apex:param value="{!pitem.Price}"/>
+                  </apex:outputText>
+              </apex:column>
+              <apex:column headerValue="Qty to Buy">
+                  <apex:inputText value="{!pitem.qtyToBuy}" rendered="{!pitem.inStock}"/>
+                  <apex:outputText value="Out of Stock" rendered="{! NOT(pitem.inStock)}"/>
+              </apex:column>
+          </apex:pageblockTable>
+      </apex:pageblockSection>
+      <apex:pageBlockSection >
+          <apex:commandButton action="{!addToCard}" value="Add To Card" reRender="shopping_cart"/>
+      </apex:pageBlockSection>
+      </apex:pageBlock>
+</apex:form>
+<apex:pageBlock title="Your Cart" id="shopping_cart">
+    <apex:outputText value="{!cartContents}" escape="false"/>
+</apex:pageBlock>
+</apex:page>

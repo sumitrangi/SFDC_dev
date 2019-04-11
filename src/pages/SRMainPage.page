@@ -1,0 +1,7 @@
+<apex:page sidebar="false">
+    <apex:composition template="SRBasicTemplate">
+        <apex:define name="body">
+            <p>This is the body of simple page, substituted in template</p>
+        </apex:define>
+    </apex:composition>
+</apex:page>

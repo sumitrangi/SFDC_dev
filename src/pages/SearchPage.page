@@ -1,0 +1,20 @@
+<apex:page id="SearchPage">
+    <apex:tabPanel switchType="client" selectedTab="simpleSearchTab" id="searchTabPanel">
+        <apex:tab label="Simple Search" name="simpleSearchTab" id="tabOne">content for Simple Search screen
+            <div id="dialog" title="Escalation Reason">
+                <p>Please select the reason for escalation?</p>
+                <p id="Opt1"><input type="radio" name="Reason" value="Advanced Billing Troubleshooting"/>Advanced Billing Troubleshooting</p>
+                <p id="Opt2"><input type="radio" name="Reason" value="Advanced Product Troubleshooting"/>Advanced Product Troubleshooting</p>
+                <p id="Opt3"><input type="radio" name="Reason" value="Customer Upset/Requesting Escalation"/>Customer Upset/Requesting Escalation</p>
+            </div>
+            <div>
+                <select>
+                    <option value="" disabled="disabled" selected="selected">Please select a name</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                </select>
+            </div>
+        </apex:tab>
+        <apex:tab label="Advanced Search" name="advancedSearchTab" id="tabTwo">content Advanced Search screen</apex:tab>
+    </apex:tabPanel>
+</apex:page>

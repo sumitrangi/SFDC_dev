@@ -1,0 +1,32 @@
+<apex:page standardController="Account">
+        <p>Hello {! $User.FirstName} !</p>
+        <p>You are viewing the account: {! Account.name}</p>
+        <p>Account owner: {!Account.Owner.Name}</p>
+        <apex:outputLink value="http://www.yahoo.com">Click here: Yahoo!</apex:outputLink>
+        <p></p>
+        <apex:outputlink value="{! $Page.SRAccount1}?id={!Account.Id}">I am me!</apex:outputlink>
+        <p></p>
+        <apex:outputlink value="{! URLFOR($Action.Account.new)}">URL for Create New</apex:outputlink>
+        <apex:pageBlock title="Custom Output (PageBlock)">
+            <apex:pageblockSection title="Custom Section title">
+                <apex:outputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Owner.Name}"/>
+            </apex:pageblockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="My Account Contacts">
+            <apex:pageBlockTable value="{!Account.Contacts}" var="item">
+                <apex:column value="{!item.Name}"/>
+                <apex:column value="{!item.LastName}"/>
+                <apex:column value="{!item.Phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="My Account Contacts 2">
+            <apex:dataList value="{!Account.Contacts}" var="item">
+                <apex:outputText value="{!item.Name}"/>
+                <apex:outputText value="{!item.LastName}"/>
+                <apex:outputText value="{!item.Phone}"/>
+            </apex:dataList>
+        </apex:pageBlock>
+        <apex:detail relatedList="false"/>
+        <apex:relatedList list="Cases"/>
+</apex:page>

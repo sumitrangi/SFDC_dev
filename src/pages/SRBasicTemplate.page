@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:stylesheet value="{! URLFOR($resource.Style, 'Styles.css')}"/>
+    <h1>My Fancy site</h1>
+    <apex:insert name="body"/>
+</apex:page>

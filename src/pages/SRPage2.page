@@ -1,0 +1,9 @@
+<apex:page >
+	<apex:form >
+        Page 2 from Force.com IDE 
+        <!--
+        <apex:inputText id="inputText1" label="lblInputText1" value="{!inputValue}"/>
+		-->
+		<input id="inputText1" type="text" name="inputText1" value="Sumit Rangi"/>
+    </apex:form>
+</apex:page>

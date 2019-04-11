@@ -1,0 +1,14 @@
+<apex:page sidebar="false" showHeader="true">
+    <apex:form >
+        <input id="inputText1" type="text" name="inputText1" value="{! $User.FirstName} {! $User.LastName}"/>
+        <p>{! $User.email}</p>
+        <p>Todays date : {!Now()}</P>
+        <p>{! CONTAINS('ABCDEF', 'BCD')}</p>
+        <p>{! IF(DAY(TODAY()) > 14, 'After the 14th', 'On or before the 14th')}</p>
+        <apex:pageBlock title="A Block Title">
+            <apex:pageBlockSection title="A Section Title">
+                I am three components deep
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
