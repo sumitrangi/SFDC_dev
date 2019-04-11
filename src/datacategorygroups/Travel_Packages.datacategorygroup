@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Airfare + Hotel</label>
+            <name>Airfare_Hotel</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Airfare + Hotel + Car</label>
+            <name>Airfare_Hotel_Car</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Cruise</label>
+            <name>Cruise</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Travel Packages</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>GRAND_SUMMARY</groupColumn>
+    <mappings>
+        <sourceField>JobName</sourceField>
+        <sourceType>snapshot</sourceType>
+        <targetField>TestObject1__c.Name</targetField>
+    </mappings>
+    <name>VFI Cases snapshot</name>
+    <runningUser>sumitrangi@yahoo.com</runningUser>
+    <sourceReport>VFI_Reports/VFI_2014_Cases_by_Origin</sourceReport>
+    <targetObject>TestObject1__c</targetObject>
+</AnalyticSnapshot>
