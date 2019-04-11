@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Header__c</fullName>
+        <externalId>false</externalId>
+        <label>Header</label>
+        <referenceTo>Part_Request_Header__c</referenceTo>
+        <relationshipLabel>Part Request Details</relationshipLabel>
+        <relationshipName>Part_Request_Details</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Inventory_Loc__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Inventory Loc</label>
+        <referenceTo>Inventory_Location__c</referenceTo>
+        <relationshipLabel>Part Request Details</relationshipLabel>
+        <relationshipName>Part_Request_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Please Specify</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Repair Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Repair-Stock</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WH-to-Site</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Required_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Required By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Site_Part__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Site Part</label>
+        <referenceTo>Site_Part__c</referenceTo>
+        <relationshipLabel>Part Request Details</relationshipLabel>
+        <relationshipName>Part_Request_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Part Request Detail</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Detail Id</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Part Request Details</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Inventory_Location_check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+  OR (
+    ISPICKVAL(Request_Type__c, &apos;Repair-Stock&apos;),
+    ISPICKVAL(Request_Type__c, &apos;WH-to-Site&apos;)
+  ),
+  ISBLANK(Inventory_Loc__c)
+)</errorConditionFormula>
+        <errorDisplayField>Inventory_Loc__c</errorDisplayField>
+        <errorMessage>Please select an Inventory Location</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Request_type_check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Request_Type__c, &apos;Please Specify&apos;)</errorConditionFormula>
+        <errorDisplayField>Request_Type__c</errorDisplayField>
+        <errorMessage>Please select a valid value.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Part_Request_Detail</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>+ Part Request Detail</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>top.window.location.href = &quot;a0C/e?Name=(Auto)&amp;CF00Ni000000GQ6jb_lkid={!Part_Request_Header__c.Id}&amp;CF00Ni000000GQ6jb_lkold={!Part_Request_Header__c.Name}&quot;;</url>
+    </webLinks>
+</CustomObject>
