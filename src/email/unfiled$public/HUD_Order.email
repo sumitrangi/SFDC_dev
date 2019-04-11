@@ -1,0 +1,8 @@
+New Order created:
+
+Account Name : {!Account.Name} 
+
+Order Number: {!Order.OrderNumber}
+
+Thank you,
+{!User.Name}

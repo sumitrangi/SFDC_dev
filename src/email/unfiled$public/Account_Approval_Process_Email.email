@@ -1,0 +1,8 @@
+Account Approval Process email for below Account:
+
+Account Name : {!Account.Name}
+Account Number : {!Account.AccountNumber}
+Created By: {!Account.CreatedBy}
+
+Thanks,
+Team

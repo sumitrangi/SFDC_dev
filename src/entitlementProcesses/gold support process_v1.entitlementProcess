@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>true</isVersionDefault>
+    <milestones>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>10</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Milestone</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case_Milestone</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneName>Resolution</milestoneName>
+        <minutesToComplete>30</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <name>Gold Support Process</name>
+    <versionMaster>552i0000000NqiP</versionMaster>
+    <versionNumber>1</versionNumber>
+</EntitlementProcess>
